@@ -3,6 +3,9 @@
   <p>Minh họa việc giải bài toán 8 quân Xe bằng các thuật toán tìm kiếm</p>
 </div>
 
+<h1 align="center">8 Rooks Problem</h1>
+<h3 align="center">Minh họa việc giải bài toán 8 quân Xe bằng các thuật toán tìm kiếm</h3>
+
 ---
 ## Sinh viên thực hiện:
 
