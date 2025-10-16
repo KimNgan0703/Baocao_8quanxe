@@ -5,7 +5,6 @@
 </div>
 
 ---
-
 ## Sinh viên thực hiện:
 
 | Họ và tên | MSSV |
@@ -196,7 +195,12 @@ Thuật toán tìm **chuỗi hành động tối ưu** để tăng **xác suất
 <p align="center">
   <img src="belief.gif" width="500" alt="Belief animation">
 </p>
-
 ---
+
+### 4. Cài đặt & Chạy chương trình
+- pip install pillow
+- pip install matplotlib
+---
+
 ## Tài liệu tham khảo:
 - Russell & Norvig (2016). *Artificial Intelligence: A Modern Approach (3rd Edition)*.  
