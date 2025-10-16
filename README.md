@@ -143,7 +143,6 @@ Giảm bộ nhớ nhưng **có thể bỏ sót lời giải tối ưu** nếu `k
 <p align="center">
   <img src="beam.gif" width="500" alt="Beam animation">
 </p>
-
 ---
 
 ### 2.4. Tìm kiếm theo ràng buộc (Constraint Satisfaction Problems - CSP)
@@ -156,7 +155,6 @@ Lặp lại cho đến khi tìm ra **lời giải hợp lệ**.
 <p align="center">
   <img src="backtracking.gif" width="500" alt="Backtracking animation">
 </p>
-
 ---
 
 #### b. Forward Checking
@@ -166,7 +164,6 @@ Giúp **giảm đáng kể số lượng ràng buộc cần kiểm tra**, tăng 
 <p align="center">
   <img src="forward.gif" width="500" alt="Forward Checking animation">
 </p>
-
 ---
 
 #### c. AC-3 (Arc Consistency 3)
@@ -177,8 +174,8 @@ Thuật toán lặp lại cho đến khi **mọi cung đều nhất quán**.
 <p align="center">
   <img src="ac3.gif" width="500" alt="AC3 animation">
 </p>
-
 ---
+
 ### 2.5. Nhóm thuật toán trong môi trường phức tạp (Complex Search)
 #### a. AND-OR Tree Search
 **AND-OR Tree Search** được dùng cho **môi trường không xác định**.  
@@ -189,7 +186,6 @@ Kết quả là một **cây kế hoạch** chứ không chỉ là đường đi
 <p align="center">
   <img src="and_or.gif" width="500" alt="And-Or animation">
 </p>
-
 ---
 
 #### b. Belief State Search
