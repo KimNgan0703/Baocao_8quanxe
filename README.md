@@ -202,6 +202,25 @@ Thuật toán tìm **chuỗi hành động tối ưu** để tăng **xác suất
 </p>
 ---
 
+#### c. Partially Observerly Search
+Partially Observable Search được áp dụng khi tác nhân không quan sát được toàn bộ môi trường,
+tức là chỉ nhận được một phần thông tin tại mỗi bước.
+Trong môi trường này, tác nhân phải duy trì một tập hợp trạng thái khả dĩ (gọi là belief states)
+dựa trên các quan sát hiện tại (observations) và hành động trước đó (actions).
+Thuật toán cố gắng ước lượng vị trí hoặc trạng thái thật sự của thế giới và chọn hành động tiếp theo
+để giảm độ không chắc chắn (uncertainty) và tiến gần hơn tới mục tiêu.
+- **Minh họa**:
+<p align="center">
+  <img src="partially.gif" width="500" alt="Belief animation">
+</p>
+---
+
+### 3. So sánh các thuật toán
+<p align="center">
+  <img src="ss.gif" width="500" alt="Belief animation">
+</p>
+---
+
 ### 4. Cài đặt & Chạy chương trình
 - pip install pillow
 - pip install matplotlib
