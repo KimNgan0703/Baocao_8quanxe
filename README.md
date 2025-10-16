@@ -1,6 +1,6 @@
 <div align="center">
-  <h1>8 Rooks Solver ♖</h1>
-  <p>Trò chơi giải đố 8 quân xe với nhiều nhóm thuật toán tìm kiếm AI</p>
+  <h1>8 Rooks Problem</h1>
+  <p>Minh họa việc giải bài toán 8 quân Xe bằng các thuật toán tìm kiếm</p>
 </div>
 
 ---
