@@ -1,4 +1,3 @@
-# ♖ 8 Rooks Solver  
 <div align="center">
   <h1>8 Rooks Solver ♖</h1>
   <p>Trò chơi giải đố 8 quân xe với nhiều nhóm thuật toán tìm kiếm AI</p>
