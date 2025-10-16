@@ -7,8 +7,6 @@
   <img src="https://img.shields.io/badge/Framework-Tkinter-f9c5d5?style=flat-square">
   <img src="https://img.shields.io/badge/Topic-Search%20Algorithms-fad0c4?style=flat-square">
 </p>
-
-<hr style="border:1px solid #f7c6d9;">
 ---
 
 ## Sinh viên thực hiện:
