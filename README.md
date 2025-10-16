@@ -6,6 +6,12 @@
 <h1 align="center">8 Rooks Problem</h1>
 <h3 align="center">Minh họa việc giải bài toán 8 quân Xe bằng các thuật toán tìm kiếm</h3>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/8_Rooks_Problem-blue?style=for-the-badge&logo=chess&logoColor=white" alt="8 Rooks Problem"/>
+</p>
+
+<h2 align="center">Minh họa việc giải bài toán 8 quân Xe bằng các thuật toán tìm kiếm</h2>
+
 ---
 ## Sinh viên thực hiện:
 
