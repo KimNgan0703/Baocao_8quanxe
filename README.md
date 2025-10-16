@@ -1,95 +1,211 @@
-## 🧠 Các Nhóm Thuật Toán Tìm Kiếm Trong 8 Rooks Solver
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=soft&color=fff4cc&height=100&text=🌼%208%20Rooks%20Problem%20🌼&fontColor=7a622a&fontAlignY=40&fontSize=38&desc=Minh%20h%E1%BB%8Da%20gi%E1%BA%A3i%20b%C3%A0i%20to%C3%A1n%208%20qu%C3%A2n%20Xe%20b%E1%BA%B1ng%20thu%E1%BA%ADt%20to%C3%A1n%20t%C3%ACm%20ki%E1%BA%BFm&descAlignY=70&descAlign=50" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-Python-fff1b8?style=flat-square">
+  <img src="https://img.shields.io/badge/Framework-Tkinter-ffec99?style=flat-square">
+  <img src="https://img.shields.io/badge/Topic-Search%20Algorithms-ffeaa7?style=flat-square">
+</p>
+
+<hr style="border:1px solid #fceabb;">
+
+
+## Sinh viên thực hiện:
+| Họ và tên | MSSV |
+|------------|------|
+| **Phạm Thị Kim Ngân** | **23110128** |
 
 ---
 
-### 🔹 **I. Tìm kiếm không có thông tin (Uninformed Search)**
+## Các Nhóm Thuật Toán Tìm Kiếm Trong 8 Rooks Solver
 
-#### 1️⃣ BFS (Breadth-First Search)
+---
+## 1. Mục tiêu
+- Xây dựng chương trình giải bài toán 8 quân xe bằng các thuật toán tìm kiếm đã được học.
+- Hiểu được khái niệm, cách hoạt động của từng thuật toán thông qua mô phỏng trên giao diện bàn cờ 8x8.: thòi gian chạy, số nút 
+- Quan sát, đánh giá hiệu năng các thuật toán qua các tiêu chí thời gian chạy, số nút mở rộng, kích thước biên và giá trị heuristic.
+## 2. Nội dung
+### **2.1. Tìm kiếm không có thông tin (Uninformed Search)**
+#### a. BFS (Breadth-First Search)
 **BFS** mở rộng các trạng thái theo **chiều rộng**, duyệt toàn bộ các node ở cùng mức trước khi đi sâu hơn.  
 Sử dụng **hàng đợi (queue)** để quản lý các trạng thái cần xét.  
 Khi đặt đủ 8 quân Xe hợp lệ, thuật toán dừng lại.
-
-#### 2️⃣ DFS (Depth-First Search)
-**DFS** đi theo **chiều sâu**, mở rộng trạng thái sâu nhất trước rồi mới quay lui.  
-Sử dụng **ngăn xếp (stack)** để lưu các node chưa xét.  
-Khi không còn bước đi hợp lệ, thuật toán **quay lui (backtrack)**.
-
-#### 3️⃣ UCS (Uniform Cost Search)
-**UCS** mở rộng các node có chi phí nhỏ nhất.  
-Mỗi lần lấy node có tổng chi phí **g(n)** thấp nhất để mở rộng, đảm bảo tìm được **lời giải tối ưu nếu chi phí đồng nhất**.
-
-#### 4️⃣ DLS (Depth-Limited Search)
-**DLS** tương tự DFS nhưng có **giới hạn độ sâu**.  
-Nếu đạt đến giới hạn mà chưa có lời giải, thuật toán **cắt nhánh và quay lui** để thử hướng khác.
-
-#### 5️⃣ IDS (Iterative Deepening Search)
-**IDS** thực hiện **lặp DFS với giới hạn độ sâu tăng dần** cho đến khi tìm thấy lời giải.  
-Kết hợp ưu điểm của **BFS (đầy đủ)** và **DFS (tiết kiệm bộ nhớ)**.
+- **Minh họa**:
+<p align="center">
+  <img src="bfs.gif" width="500" alt="BFS animation">
+</p>
 
 ---
 
-### 🔹 **II. Tìm kiếm có thông tin (Informed / Heuristic Search)**
+#### b. DFS (Depth-First Search)
+**DFS** đi theo **chiều sâu**, mở rộng trạng thái sâu nhất trước rồi mới quay lui.  
+Sử dụng **ngăn xếp (stack)** để lưu các node chưa xét.  
+Khi không còn bước đi hợp lệ, thuật toán **quay lui (backtrack)**.
+- **Minh họa**:
+<p align="center">
+  <img src="dfs.gif" width="500" alt="DFS animation">
+</p>
 
-#### 6️⃣ Greedy Best-First Search
+---
+
+#### c. UCS (Uniform Cost Search)
+**UCS** mở rộng các node có chi phí nhỏ nhất.  
+Mỗi lần lấy node có tổng chi phí **g(n)** thấp nhất để mở rộng, đảm bảo tìm được **lời giải tối ưu nếu chi phí đồng nhất**.
+- **Minh họa**:
+<p align="center">
+  <img src="ucs.gif" width="500" alt="UCS animation">
+</p>
+
+---
+
+#### d. DLS (Depth-Limited Search)
+**DLS** tương tự DFS nhưng có **giới hạn độ sâu**.  
+Nếu đạt đến giới hạn mà chưa có lời giải, thuật toán **cắt nhánh và quay lui** để thử hướng khác.
+- **Minh họa**:
+<p align="center">
+  <img src="dls.gif" width="500" alt="DLS animation">
+</p>
+
+---
+
+#### e. IDS (Iterative Deepening Search)
+**IDS** thực hiện **lặp DFS với giới hạn độ sâu tăng dần** cho đến khi tìm thấy lời giải.  
+Kết hợp ưu điểm của **BFS (đầy đủ)** và **DFS (tiết kiệm bộ nhớ)**.
+- **Minh họa**:
+<p align="center">
+  <img src="ids.gif" width="500" alt="IDS animation">
+</p>
+
+---
+
+### 2.2. Tìm kiếm có thông tin (Informed Search)
+#### a. Greedy Best-First Search
 **Greedy Best-First Search** chọn node có giá trị heuristic **h(n)** nhỏ nhất để mở rộng trước.  
 Chạy nhanh nhưng **không đảm bảo tối ưu**, vì có thể rơi vào **điểm kẹt cục bộ**.
+- **Minh họa**:
+<p align="center">
+  <img src="greedy.gif" width="500" alt="Greedy animation">
+</p>
 
-#### 7️⃣ A* (A-star Search)
+---
+
+#### b. A* (A-star Search)
 Thuật toán **A\*** sử dụng công thức:
 \[
 f(n) = g(n) + h(n)
 \]
 Kết hợp giữa **chi phí thực tế (g)** và **ước lượng heuristic (h)** để tìm đường đi tối ưu.  
 Nếu heuristic hợp lệ, **A\*** đảm bảo **lời giải tối ưu**.
-
-#### 8️⃣ Beam Search
-**Beam Search** chỉ giữ lại **k node tốt nhất** tại mỗi bước mở rộng.  
-Giảm bộ nhớ nhưng **có thể bỏ sót lời giải tối ưu** nếu `k` quá nhỏ.
-
-#### 9️⃣ AND-OR Tree Search
-**AND-OR Tree Search** được dùng cho **môi trường không xác định**.  
-- **Nút OR**: biểu diễn **lựa chọn hành động**.  
-- **Nút AND**: biểu diễn **các điều kiện cần thỏa đồng thời**.  
-Kết quả là một **cây kế hoạch** chứ không chỉ là đường đi đơn.
-
-#### 🔟 Belief State Search
-**Belief State Search** hoạt động trong **môi trường không chắc chắn**.  
-Mỗi trạng thái là một **tập hợp khả năng (belief states)**.  
-Thuật toán tìm **chuỗi hành động tối ưu** để tăng **xác suất đạt mục tiêu**.
+- **Minh họa**:
+<p align="center">
+  <img src="a_start.gif" width="500" alt="A star animation">
+</p>
 
 ---
 
-### 🔹 **III. Tìm kiếm cục bộ (Local Search)**
+###  2.3. Tìm kiếm cục bộ (Local Search)
 
-#### 11️⃣ Hill Climbing
+#### a. Hill Climbing
 **Hill Climbing** xuất phát từ một trạng thái ban đầu và **leo dần lên trạng thái tốt hơn** theo heuristic.  
 Thuật toán dừng khi **không còn trạng thái tốt hơn** (rơi vào **cực trị cục bộ**).
+- **Minh họa**:
+<p align="center">
+  <img src="hill.gif" width="500" alt="Hill animation">
+</p>
 
-#### 12️⃣ Simulated Annealing
+---
+
+#### b. Simulated Annealing
 **Simulated Annealing** cho phép **chấp nhận tạm thời các trạng thái kém hơn** để thoát khỏi local maxima.  
 **Nhiệt độ (T)** giảm dần qua mỗi vòng lặp cho đến khi đạt **ngưỡng dừng**.
 
-#### 13️⃣ Genetic Algorithm (GA)
+<p align="center">
+  <img src="anna.gif" width="500" alt="Simulated Annealing animation">
+</p>
+
+---
+
+#### c. Genetic Algorithm (GA)
 **Genetic Algorithm** mô phỏng **quá trình tiến hóa tự nhiên** với các thao tác:  
 **chọn lọc – lai ghép – đột biến.**  
 Duy trì **quần thể lời giải** và chọn **cá thể tốt nhất** sau nhiều thế hệ.
 
+<p align="center">
+  <img src="genetic.gif" width="500" alt="Genetic Algorithm animation">
+</p>
+
+---
+#### d. Beam Search
+**Beam Search** chỉ giữ lại **k node tốt nhất** tại mỗi bước mở rộng.  
+Giảm bộ nhớ nhưng **có thể bỏ sót lời giải tối ưu** nếu `k` quá nhỏ.
+- **Minh họa**:
+<p align="center">
+  <img src="beam.gif" width="500" alt="Beam animation">
+</p>
+
 ---
 
-### 🔹 **IV. Tìm kiếm theo ràng buộc (Constraint Satisfaction Problems - CSP)**
+### 2.4. Tìm kiếm theo ràng buộc (Constraint Satisfaction Problems - CSP)
 
-#### 14️⃣ Backtracking
+#### a. Backtracking
 **Backtracking** là kỹ thuật **thử và sai (try & error)**.  
 Đặt từng quân Xe rồi kiểm tra ràng buộc; nếu vi phạm, **quay lui** để thử hướng khác.  
 Lặp lại cho đến khi tìm ra **lời giải hợp lệ**.
+- **Minh họa**:
+<p align="center">
+  <img src="backtracking.gif" width="500" alt="Backtracking animation">
+</p>
 
-#### 15️⃣ Forward Checking
+---
+
+#### b. Forward Checking
 **Forward Checking** mở rộng từ Backtracking bằng cách **loại bỏ trước các giá trị không hợp lệ** trong miền giá trị của biến.  
 Giúp **giảm đáng kể số lượng ràng buộc cần kiểm tra**, tăng tốc độ tìm kiếm.
+- **Minh họa**:
+<p align="center">
+  <img src="forward.gif" width="500" alt="Forward Checking animation">
+</p>
 
-#### 16️⃣ AC-3 (Arc Consistency 3)
+---
+
+#### c. AC-3 (Arc Consistency 3)
 **AC-3** đảm bảo **tính nhất quán cung (arc consistency)** giữa các biến trong bài toán CSP.  
 Nếu một giá trị khiến ràng buộc không thỏa, nó sẽ **bị loại khỏi miền giá trị**.  
 Thuật toán lặp lại cho đến khi **mọi cung đều nhất quán**.
+- **Minh họa**:
+<p align="center">
+  <img src="ac3.gif" width="500" alt="AC3 animation">
+</p>
 
 ---
+### 2.5. Nhóm thuật toán trong môi trường phức tạp (Complex Search)
+#### a. AND-OR Tree Search
+**AND-OR Tree Search** được dùng cho **môi trường không xác định**.  
+- **Nút OR**: biểu diễn **lựa chọn hành động**.  
+- **Nút AND**: biểu diễn **các điều kiện cần thỏa đồng thời**.  
+Kết quả là một **cây kế hoạch** chứ không chỉ là đường đi đơn.
+- **Minh họa**:
+<p align="center">
+  <img src="and_or.gif" width="500" alt="And-Or animation">
+</p>
+
+---
+
+#### b. Belief State Search
+**Belief State Search** hoạt động trong **môi trường không chắc chắn**.  
+Mỗi trạng thái là một **tập hợp khả năng (belief states)**.  
+Thuật toán tìm **chuỗi hành động tối ưu** để tăng **xác suất đạt mục tiêu**.
+- **Minh họa**:
+<p align="center">
+  <img src="belief.gif" width="500" alt="Belief animation">
+</p>
+---
+
+### 4. Cài đặt & Chạy chương trình
+- pip install pillow
+- pip install matplotlib
+---
+
+## Tài liệu tham khảo:
+- Russell & Norvig (2016). *Artificial Intelligence: A Modern Approach (3rd Edition)*.  
