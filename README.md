@@ -2,9 +2,28 @@
   <h1>8 Rooks Problem</h1>
   <p>Minh họa việc giải bài toán 8 quân Xe bằng các thuật toán tìm kiếm</p>
 </div>
----
-## Sinh viên thực hiện:
 
+<h1 align="center" style="color:#e88fb3;">🌸 8 Rooks Problem 🌸</h1>
+
+<p align="center">
+  <em>Minh họa việc giải bài toán 8 quân Xe bằng các thuật toán tìm kiếm trong Trí tuệ nhân tạo</em><br>
+  <b>Python · Tkinter GUI · Artificial Intelligence</b>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-Python-ffb6c1?style=flat-square">
+  <img src="https://img.shields.io/badge/Framework-Tkinter-f9c5d5?style=flat-square">
+  <img src="https://img.shields.io/badge/Topic-Search%20Algorithms-fac7d9?style=flat-square">
+  <img src="https://img.shields.io/badge/Project-8%20Rooks-ffd1dc?style=flat-square">
+</p>
+
+<hr style="border:1px solid #f7c6d9;">
+
+
+---
+
+## Sinh viên thực hiện:
+---
 | Họ và tên | MSSV |
 |------------|------|
 | **Phạm Thị Kim Ngân** | **23110128** |
