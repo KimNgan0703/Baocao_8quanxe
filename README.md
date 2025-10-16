@@ -1,14 +1,15 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=ffdae0&height=100&text=🌸%208%20Rooks%20Problem%20🌸&fontColor=813c64&fontAlignY=40&fontSize=38&desc=Minh%20h%E1%BB%8Da%20gi%E1%BA%A3i%20b%C3%A0i%20to%C3%A1n%208%20qu%C3%A2n%20Xe%20b%E1%BA%B1ng%20thu%E1%BA%ADt%20to%C3%A1n%20t%C3%ACm%20ki%E1%BA%BFm&descAlignY=70&descAlign=50" />
+  <img src="https://capsule-render.vercel.app/api?type=soft&color=fff4cc&height=100&text=🌼%208%20Rooks%20Problem%20🌼&fontColor=7a622a&fontAlignY=40&fontSize=38&desc=Minh%20h%E1%BB%8Da%20gi%E1%BA%A3i%20b%C3%A0i%20to%C3%A1n%208%20qu%C3%A2n%20Xe%20b%E1%BA%B1ng%20thu%E1%BA%ADt%20to%C3%A1n%20t%C3%ACm%20ki%E1%BA%BFm&descAlignY=70&descAlign=50" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Language-Python-ffcfe1?style=flat-square">
-  <img src="https://img.shields.io/badge/Framework-Tkinter-f9c5d5?style=flat-square">
-  <img src="https://img.shields.io/badge/Topic-Search%20Algorithms-fad0c4?style=flat-square">
+  <img src="https://img.shields.io/badge/Language-Python-fff1b8?style=flat-square">
+  <img src="https://img.shields.io/badge/Framework-Tkinter-ffec99?style=flat-square">
+  <img src="https://img.shields.io/badge/Topic-Search%20Algorithms-ffeaa7?style=flat-square">
 </p>
 
-<hr style="border:1px solid #f7c6d9;">
+<hr style="border:1px solid #fceabb;">
+
 
 ## Sinh viên thực hiện:
 | Họ và tên | MSSV |
