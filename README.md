@@ -1,12 +1,13 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=soft&color=ffdae0&height=100&text=🌸%208%20Rooks%20Problem%20🌸&fontColor=813c64&fontAlignY=40&fontSize=38&desc=Minh%20h%E1%BB%8Da%20gi%E1%BA%A3i%20b%C3%A0i%20to%C3%A1n%208%20qu%C3%A2n%20Xe%20b%E1%BA%B1ng%20thu%E1%BA%ADt%20to%C3%A1n%20t%C3%ACm%20ki%E1%BA%BFm&descAlignY=70&descAlign=50" />
+  <svg viewBox="0 0 800 100">
+    <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle"
+      font-size="50" font-family="Verdana" stroke="#d56c91" stroke-width="2" fill="#f9b7cf">
+      8 Rooks Problem
+    </text>
+  </svg>
 </p>
+<p align="center"><em>Minh họa bài toán 8 quân Xe bằng thuật toán tìm kiếm</em></p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Language-Python-ffcfe1?style=flat-square">
-  <img src="https://img.shields.io/badge/Framework-Tkinter-f9c5d5?style=flat-square">
-  <img src="https://img.shields.io/badge/Topic-Search%20Algorithms-fad0c4?style=flat-square">
-</p>
 ---
 
 ## Sinh viên thực hiện:
