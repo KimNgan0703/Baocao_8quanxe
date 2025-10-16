@@ -75,7 +75,7 @@ Kết hợp ưu điểm của **BFS (đầy đủ)** và **DFS (tiết kiệm b�
 
 ---
 
-### 2.2. Tìm kiếm có thông tin (Informed Search)**
+### 2.2. Tìm kiếm có thông tin (Informed Search)
 #### a. Greedy Best-First Search
 **Greedy Best-First Search** chọn node có giá trị heuristic **h(n)** nhỏ nhất để mở rộng trước.  
 Chạy nhanh nhưng **không đảm bảo tối ưu**, vì có thể rơi vào **điểm kẹt cục bộ**.
@@ -100,7 +100,7 @@ Nếu heuristic hợp lệ, **A\*** đảm bảo **lời giải tối ưu**.
 
 ---
 
-###  2.3. Tìm kiếm cục bộ (Local Search)**
+###  2.3. Tìm kiếm cục bộ (Local Search)
 
 #### a. Hill Climbing
 **Hill Climbing** xuất phát từ một trạng thái ban đầu và **leo dần lên trạng thái tốt hơn** theo heuristic.  
@@ -142,7 +142,7 @@ Giảm bộ nhớ nhưng **có thể bỏ sót lời giải tối ưu** nếu `k
 
 ---
 
-### 2.4. Tìm kiếm theo ràng buộc (Constraint Satisfaction Problems - CSP)**
+### 2.4. Tìm kiếm theo ràng buộc (Constraint Satisfaction Problems - CSP)
 
 #### a. Backtracking
 **Backtracking** là kỹ thuật **thử và sai (try & error)**.  
@@ -175,7 +175,7 @@ Thuật toán lặp lại cho đến khi **mọi cung đều nhất quán**.
 </p>
 
 ---
-#### 2.5. Nhóm thuật toán trong môi trường phức tạp (Complex Search)
+### 2.5. Nhóm thuật toán trong môi trường phức tạp (Complex Search)
 #### a. AND-OR Tree Search
 **AND-OR Tree Search** được dùng cho **môi trường không xác định**.  
 - **Nút OR**: biểu diễn **lựa chọn hành động**.  
