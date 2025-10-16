@@ -50,6 +50,7 @@ class EightRooks:
             ('backtracking', lambda s: self.backtracking(s)),
             ('forward_checking', lambda s: self.forward_checking(s)),
             ('ac3', lambda s: self.ac3(s)),
+            ('partially_observable', lambda s: self.partially_observable_search(s)),
         ]
 
         prev_running = self.is_running
@@ -129,8 +130,6 @@ class EightRooks:
                     break
 
     def ucs(self, state):
-        if (state == []):
-            state = [(random.randint(0, self.n - 1), random.randint(0, self.n - 1))]
         frontier = PriorityQueue()
         frontier.put((0, state))
         explored = set()
@@ -175,6 +174,7 @@ class EightRooks:
                                 del frontier.queue[index]
                                 frontier.put(child)
                                 break
+                    break
                 break
 
     def IDS(self, state):
@@ -631,6 +631,75 @@ class EightRooks:
             if r == row or c == col:
                 return False
         return True
+
+    def partially_observable_search(self, state):
+        nodes_expanded = 0
+        max_frontier = 1
+        
+        # Start with initial belief state - we know the placed rooks but have uncertainty about the rest
+        belief_state = [state.copy()]
+        
+        # For tracking the search process
+        visited_beliefs = set()
+        
+        while belief_state:
+            max_frontier = max(max_frontier, len(belief_state))
+            current_belief = belief_state.pop(0)
+            nodes_expanded += 1
+            
+            # Convert belief to tuple for hashing
+            belief_key = tuple(sorted(current_belief))
+            if belief_key in visited_beliefs:
+                continue
+            visited_beliefs.add(belief_key)
+            
+            # If this belief state contains a complete solution, return it
+            if self.goal_test(current_belief):
+                self.solutions['partially_observable'] = current_belief.copy()
+                self.algorithm_stats['partially_observable'] = {
+                    'nodes_expanded': nodes_expanded,
+                    'max_frontier': max_frontier,
+                    'heuristic': self.h(current_belief),
+                }
+                return current_belief.copy()
+
+            observable_rows = self.get_observable_rows(current_belief)
+
+            for row in observable_rows:
+                if any(r == row for r, _ in current_belief):
+                    continue
+                for col in range(self.n):
+                    if any(c == col for _, c in current_belief):
+                        continue
+                    new_belief = current_belief + [(row, col)]
+                    if self.is_belief_consistent(new_belief):
+                        belief_state.append(new_belief)
+                    break
+                break
+        
+        best_solution = max(visited_beliefs, key=lambda x: len(x))
+        self.solutions['partially_observable'] = list(best_solution)
+        return list(best_solution)
+
+    def get_observable_rows(self, state):
+        placed_rows = {r for r, _ in state}
+
+        if len(state) <= 2:
+            return [r for r in range(min(4, self.n)) if r not in placed_rows]
+        elif len(state) <= 4:
+            return [r for r in range(min(6, self.n)) if r not in placed_rows][:3]
+        else:
+            return [r for r in range(self.n) if r not in placed_rows][:2]
+
+    def is_belief_consistent(self, belief):
+        rows = set()
+        cols = set()
+        for r, c in belief:
+            if r in rows or c in cols:
+                return False
+            rows.add(r)
+            cols.add(c)
+        return True
     
     def backtracking(self, state):
         nodes_expanded = 0
@@ -905,7 +974,7 @@ class EightRooks:
 
         make_group(right_col, "Informed search", ["A*", "Greedy"])
         make_group(right_col, "CSP Algorithms", ["Backtracking", "Forward Checking", "AC-3"])
-        make_group(right_col, "Complex Environment", ["AND-OR Tree Search", "Belief State Search"])
+        make_group(right_col, "Complex Environment", ["AND-OR Tree Search", "Belief State Search", "Partially Observable Search"])
         
         button_frame = tk.Frame(control_frame, bg='#FFFED3')
         button_frame.pack(pady=5, padx=5, fill='x')
@@ -1260,6 +1329,16 @@ class EightRooks:
                     self.draw_xe(self.solutions['belief_search'], self.buttons_r)
                     self.btn_simulate.config(state='normal')
                     self.update_result_display('belief_search')
+            elif algorithm == "Partially Observable Search":
+                start = time.time()
+                self.partially_observable_search(init_state)
+                end = time.time()
+                self.algorithm_stats['partially_observable']['time'] = end - start
+                if self.solutions['partially_observable']:
+                    self.simulate_algorithm()
+                    self.draw_xe(self.solutions['partially_observable'], self.buttons_r)
+                    self.btn_simulate.config(state='normal')
+                    self.update_result_display('partially_observable')
             elif algorithm == "DLS":
                 start = time.time()
                 self.DLS(init_state)
@@ -1390,6 +1469,12 @@ class EightRooks:
                     self.reset_result_boards()
                     return
                 self.draw_xe(self.solutions['belief_search'], self.rook_left, is_delay=True, delay=0.5)
+            elif algorithm == "Partially Observable Search":
+                if not self.solutions.get('partially_observable'):
+                    self.status_label.config(text="Chưa có kết quả để mô phỏng. Vui lòng chạy thuật toán trước.")
+                    self.reset_result_boards()
+                    return
+                self.draw_xe(self.solutions['partially_observable'], self.rook_left, is_delay=True, delay=0.5)
             elif algorithm == "DLS":
                 if not self.solutions.get('dls'):
                     self.status_label.config(text="Chưa có kết quả để mô phỏng. Vui lòng chạy thuật toán trước.")
