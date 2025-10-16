@@ -1,8 +1,3 @@
-<div align="center">
-  <h1>8 Rooks Problem</h1>
-  <p>Minh họa việc giải bài toán 8 quân Xe bằng các thuật toán tìm kiếm</p>
-</div>
-
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=soft&color=ffdae0&height=100&text=🌸%208%20Rooks%20Problem%20🌸&fontColor=813c64&fontAlignY=40&fontSize=38&desc=Minh%20h%E1%BB%8Da%20gi%E1%BA%A3i%20b%C3%A0i%20to%C3%A1n%208%20qu%C3%A2n%20Xe%20b%E1%BA%B1ng%20thu%E1%BA%ADt%20to%C3%A1n%20t%C3%ACm%20ki%E1%BA%BFm&descAlignY=70&descAlign=50" />
 </p>
@@ -14,9 +9,6 @@
 </p>
 
 <hr style="border:1px solid #f7c6d9;">
-
-
-
 ---
 
 ## Sinh viên thực hiện:
