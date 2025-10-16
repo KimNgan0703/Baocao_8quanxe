@@ -136,6 +136,7 @@ Duy trì **quần thể lời giải** và chọn **cá thể tốt nhất** sau
 </p>
 
 ---
+
 #### d. Beam Search
 **Beam Search** chỉ giữ lại **k node tốt nhất** tại mỗi bước mở rộng.  
 Giảm bộ nhớ nhưng **có thể bỏ sót lời giải tối ưu** nếu `k` quá nhỏ.
@@ -143,6 +144,7 @@ Giảm bộ nhớ nhưng **có thể bỏ sót lời giải tối ưu** nếu `k
 <p align="center">
   <img src="beam.gif" width="500" alt="Beam animation">
 </p>
+
 ---
 
 ### 2.4. Tìm kiếm theo ràng buộc (Constraint Satisfaction Problems - CSP)
@@ -155,6 +157,7 @@ Lặp lại cho đến khi tìm ra **lời giải hợp lệ**.
 <p align="center">
   <img src="backtracking.gif" width="500" alt="Backtracking animation">
 </p>
+
 ---
 
 #### b. Forward Checking
@@ -164,6 +167,7 @@ Giúp **giảm đáng kể số lượng ràng buộc cần kiểm tra**, tăng 
 <p align="center">
   <img src="forward.gif" width="500" alt="Forward Checking animation">
 </p>
+
 ---
 
 #### c. AC-3 (Arc Consistency 3)
@@ -174,6 +178,7 @@ Thuật toán lặp lại cho đến khi **mọi cung đều nhất quán**.
 <p align="center">
   <img src="ac3.gif" width="500" alt="AC3 animation">
 </p>
+
 ---
 
 ### 2.5. Nhóm thuật toán trong môi trường phức tạp (Complex Search)
@@ -186,6 +191,7 @@ Kết quả là một **cây kế hoạch** chứ không chỉ là đường đi
 <p align="center">
   <img src="and_or.gif" width="500" alt="And-Or animation">
 </p>
+
 ---
 
 #### b. Belief State Search
@@ -196,6 +202,7 @@ Thuật toán tìm **chuỗi hành động tối ưu** để tăng **xác suất
 <p align="center">
   <img src="belief.gif" width="500" alt="Belief animation">
 </p>
+
 ---
 
 #### c. Partially Observerly Search
@@ -209,17 +216,20 @@ Thuật toán cố gắng ước lượng vị trí hoặc trạng thái thật 
 <p align="center">
   <img src="partially.gif" width="500" alt="Belief animation">
 </p>
+
 ---
 
 ### 3. So sánh các thuật toán
 <p align="center">
   <img src="ss.gif" width="500" alt="Belief animation">
 </p>
+
 ---
 
 ### 4. Cài đặt & Chạy chương trình
 - pip install pillow
 - pip install matplotlib
+  
 ---
 
 ## Tài liệu tham khảo:
